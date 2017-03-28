@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>windows</title>
+    <title>windows desktop</title>
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
+    <link rel="apple-touch-image" href="apple-touch-image.png">
+    <!-- Place favimage.ico in the root directory -->
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
@@ -15,24 +15,50 @@
     <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/windows.css">
+    <link type="text/css" rel="stylesheet" href="styles/windows.css"/>
+    <link type="text/css" rel="stylesheet" href="../bower_components/Xcontextmenu/dist/css/Xcontextmenu.css"/>
     <!-- endbuild -->
     
   </head>
-  <body>
-    <!--[if IE]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    
-    <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Sass</li>
-        <li>jQuery</li>
-      </ul>
+  <body oncontextmenu="return false;">
+    <div id="desktop">
+        <div id="main">
+            <div class="program-item">
+                <div class="program-item-icon" style="background-image: url(images/lol.jpg)"></div>
+                <span class="program-item-title">LOL</span>
+            </div>
+            <div class="program-item">
+                <div class="program-item-icon" style="background-image: url(images/tgp.jpg)"></div>
+                <span class="program-item-title">TGP</span>
+            </div>
+            <div class="program-item">
+                <div class="program-item-icon" style="background-image: url(images/cloudmusic.ico)"></div>
+                <span class="program-item-title">网易云音乐</span>
+            </div>
+            <div class="program-item">
+                <div class="program-item-icon" style="background-image: url(images/powerword.ico)"></div>
+                <span class="program-item-title">金山词霸</span>
+            </div>
+            <div class="program-item">
+                <div class="program-item-icon" style="background-image: url(images/thunder.ico)"></div>
+                <span class="program-item-title">迅雷</span>
+            </div>
+            <div class="program-item">
+                <div class="program-item-icon" style="background-image: url(images/iciba.ico)"></div>
+                <span class="program-item-title">爱词霸</span>
+            </div>
+            <div class="program-item">
+                <div class="program-item-icon" style="background-image: url(images/tgp.ico)"></div>
+                <span class="program-item-title">Tgp</span>
+            </div>
+            <div class="program-item">
+                <div class="program-item-icon" style="background-image: url(images/item1.png)"></div>
+                <span class="program-item-title">program-item1</span>
+            </div>
+        </div>
+        <div id="footer"></div>
     </div>
+
     
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -46,12 +72,63 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/Xcontextmenu/dist/js/Xcontextmenu.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
     <!-- build:js scripts/main.js -->
     <script src="scripts/windows.js"></script>
     <!-- endbuild -->
+    <script>
+        $(function(){
+            $(".program-item").contextMenu({
+                items:[
+                    [
+                        {text:"打开(O)",callback:function(ele){
+                            alert("打开 "+$(ele).find(".program-item-title").text())}
+                        }
+                    ],[
+                        {text:"剪切(X)",callback:function(ele){
+                            alert("剪切 "+$(ele).find(".program-item-title").text())}
+                        },{text:"复制(C)",callback:function(ele){
+                            alert("复制"+$(ele).find(".program-item-title").text())}
+                        }
+                    ], [
+                        {text:"删除(D)",callback:function(ele){
+                            alert("删除 "+$(ele).find(".program-item-title").text())}
+                        },{text:"重命名(M)",callback:function(ele){
+                            alert("重命名"+$(ele).find(".program-item-title").text())}
+                        }
+                    ]
+                ]
+            });
+            $("body").contextMenu({
+                items:[
+                    [
+                        {text:"查看(V)",callback:function(ele){
+                            alert("查看")}
+                        }
+                    ],[
+                        {text:"排序方式(O)",callback:function(ele){
+                            alert("排序方式")}
+                        },{text:"刷新(E)",callback:function(ele){
+                            alert("刷新")}
+                        }
+                    ], [
+                        {text:"新建(W)",callback:function(ele){
+                            alert("新建")}
+                        }
+                    ],[
+                        {text:"个性化",callback:function(ele){
+                            alert("个性化")}
+                        }
+                    ]
+                ]
+            });
+            var main=document.getElementById("main");
+            main.name="wdk";
+        })
+    </script>
   </body>
 </html>

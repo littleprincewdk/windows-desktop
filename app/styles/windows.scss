@@ -182,10 +182,7 @@ th {
     padding: 0;
 }
 
-/*desk*/
-*{
-
-}
+/*desktop*/
 html{
     height:100%;
 }
@@ -200,17 +197,17 @@ body{
     position:relative;
     width:100%;
     height:100%;
-    //background-image: url(desktop.jpg);
+    background-image: url(../images/desktop.jpg);
     background-repeat:no-repeat;
     background-position:center center;
     background-size: 100% 100%;
 }
-#desktop>#main{
+#main{
     position: relative;
     width:100%;
     height:100%;
 }
-#desktop>#footer{
+#footer{
     position: fixed;
     left: 0;
     bottom: 0;
@@ -224,8 +221,21 @@ body{
     box-sizing: border-box;
     cursor:default;
     z-index: 1;
+    .program-item-icon{
+        margin:0 auto;
+        width:48px;
+        height:48px;
+        background-size: 100% 100%;
+    }
+    .program-item-title{
+        display:block;
+        margin-top:5px;
+        text-align: center;
+        font-size:13px;
+        color: #fff;
+        font-weight: 400;
+    }
 }
-
 .program-item.active{
     border:solid rgba(255,255,255,0.4) 1px;
     background-color: rgba(255,255,255,0.2);
@@ -237,25 +247,11 @@ body{
     box-shadow: rgba(255,255,255,0.8) 0 0 1px;
     z-index: 9999;
 }
-.program-item .program-item-icon{
-    margin:0 auto;
-    width:48px;
-    height:48px;
-    background-size: 100% 100%;
-}
-.program-item .program-item-title{
-    display:block;
-    margin-top:5px;
-    text-align: center;
-    font-family: '微软雅黑';
-    font-size:13px;
-    color: #fff;
-    font-weight: 400;
-}
+
 #desktop>.program-item{
     opacity: 0.8;
 }
-#desktop>.selected-area{
+.selected-area{
     display:block;
     box-sizing: border-box;
     position:absolute;
