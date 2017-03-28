@@ -1,0 +1,46 @@
+/*
+Error: Invalid GBK character "\xE5"
+        on line 250 of windows.scss
+
+245: }
+246: .program-item .program-item-title{
+247:     display:block;
+248:     margin-top:5px;
+249:     text-align: center;
+250:     font-family: '微软雅黑';
+251:     font-size:13px;
+252:     color: #fff;
+253:     font-weight: 400;
+254: }
+255: #desktop>.program-item{
+
+Backtrace:
+windows.scss:250
+G:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/util.rb:1300:in `rescue in block in find_encoding_error'
+G:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/util.rb:1297:in `block in find_encoding_error'
+G:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/util.rb:1296:in `each'
+G:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/util.rb:1296:in `each_with_index'
+G:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/util.rb:1296:in `find_encoding_error'
+G:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/util.rb:911:in `rescue in check_sass_encoding'
+G:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/util.rb:907:in `check_sass_encoding'
+G:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/engine.rb:436:in `check_encoding!'
+G:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/engine.rb:392:in `_to_tree'
+G:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+G:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
+G:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+G:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+G:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `each'
+G:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+G:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/plugin.rb:82:in `update_stylesheets'
+G:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+G:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:51:in `process_result'
+G:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/exec/base.rb:52:in `parse'
+G:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/exec/base.rb:19:in `parse!'
+G:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/bin/scss:13:in `<top (required)>'
+G:/Ruby22/bin/scss:23:in `load'
+G:/Ruby22/bin/scss:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid GBK character \"\xE5\"\A         on line 250 of windows.scss\A \A 245: }\A 246: .program-item .program-item-title{\A 247:     display:block;\A 248:     margin-top:5px;\A 249:     text-align: center;\A 250:     font-family: '微软雅黑';\A 251:     font-size:13px;\A 252:     color: #fff;\A 253:     font-weight: 400;\A 254: }\A 255: #desktop>.program-item{"; }
