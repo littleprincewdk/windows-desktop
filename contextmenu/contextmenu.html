@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" rel="stylesheet" href="contextmenu.css"/>
+    <style type="text/css">
+        html{
+            height:100%;
+        }
+        body{
+            margin: 0;
+            height:100%;
+        }
+    </style>
+</head>
+<body>
+<div class="test" data-name="a" style="width:200px;height:200px;background-color: red;"></div>
+<div class="test" data-name="b" style="width:200px;height:200px;background-color: green;"></div>
+<!--<div class="context-menu">
+    <ul class="context-menu-list">
+        <li class="context-menu-list-item">
+            <span class="context-menu-list-item-text">返回</span>
+            <span class="context-menu-list-item-shortcut">Ctrl+C</span>
+        </li>
+        <li class="context-menu-list-item">返回</li>
+        <span class="context-menu-list-hr"></span>
+        <li class="context-menu-list-item">返回</li>
+        <li class="context-menu-list-item">返回</li>
+    </ul>
+</div>-->
+<script src="../jquery.min.js"></script>
+<script src="contextmenu.js"></script>
+<script>
+    $(function(){
+        $("body").contextMenu({
+            items:[
+                [
+                    {text:"检查",shortcut:"Ctrl+b"}
+                ]
+            ]
+        });
+        $(".test").contextMenu({
+            items:[
+                [
+                    {text:"返回",shortcut:"Alt+向左箭头",callback:function(ele){
+                        console.log($(ele).attr("data-name"))
+                    }},
+                    {text:"重新加载(R)",shortcut:"Ctrl+R",icon:"icon/lol.jpg"}
+                ],
+                [
+                    {text:"另存为(A)",shortcut:"Ctrl+S",icon:"icon/powerword.ico"},
+                    {text:"打印(P)",shortcut:"Ctrl+P"}
+                ]
+            ]
+        });
+
+    });
+    /*$("<div class='test' data-name='c'" +
+        " style='width:200px;height:200px;background-color: yellow;'></div>")
+        .click(function(){console.log("123")}).appendTo($("body"));*/
+</script>
+</body>
+</html>
