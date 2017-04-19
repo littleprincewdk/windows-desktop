@@ -1,5 +1,5 @@
 windows-destop
-[demo](http://princekin.tjxuechuang.com/projects/windows/app/index.html)
+[demo](http://princekin.tjxuechuang.com/projects/windows-desktop/app/index.html)
 -
 >用js和css写的windows桌面
 
